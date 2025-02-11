@@ -7,6 +7,7 @@ import PostUser from './pages/post-user/PostUser'
 import UpdateUser from './pages/update-user/UpdateUser'
 import { useAuth } from './hooks/useAuth'
 import DashboardPage from './pages/dashboard/DashboardPage'
+import Home from './pages/home/HomePage'
 
 function App() {
    const ProvideRoute = ({element}) => {
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path='/' element={<Home/>} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<ProvideRoute element={<DashboardPage/>}/>}> </Route>
